@@ -5,7 +5,8 @@ import os
 import tempfile
 import shutil
 
-from main import run_pipeline, run_pipeline_single_pdf
+from .main import run_pipeline, run_pipeline_single_pdf
+
 
 app = FastAPI(title="PaperMind API")
 
