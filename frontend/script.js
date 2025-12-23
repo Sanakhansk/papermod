@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8000/parse", {
+      const response = await fetch("/api/parse", {
         method: "POST",
         body: formData
       });
