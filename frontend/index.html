@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PaperMind</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <h1>PaperMind</h1>
+    <button id="themeToggle" class="theme-toggle">🌙 Dark</button>
+  </header>
+
+  <!-- PAGE CANVAS -->
+  <main class="page">
+
+    <!-- LEFT CONTENT -->
+    <section class="content">
+
+      <!-- UPLOAD CARD -->
+      <div class="card">
+        <h3>Upload PDF</h3>
+
+        <input type="file" id="pdfInput" accept="application/pdf" />
+
+        <div class="pdf-type">
+          <label><input type="radio" name="pdfType" checked /> Text Heavy</label>
+          <label><input type="radio" name="pdfType" /> Table Heavy</label>
+          <label><input type="radio" name="pdfType" /> Other</label>
+        </div>
+
+        <button id="submitBtn" type="button" class="primary">Submit</button>
+      </div>
+
+      <!-- RESULTS -->
+      <h4 class="section-heading">Results</h4>
+      <div id="results" class="results">
+        <div class="empty-results">
+          Parsed sections will appear here
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PDF PREVIEW CARD -->
+    <aside class="pdf-card">
+      <div class="pdf-label">Preview</div>
+
+      <div class="a4-container">
+        <canvas id="pdfPreview"></canvas>
+        <div id="previewText">
+          <div class="empty-preview">
+            Upload a PDF to preview it here
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
